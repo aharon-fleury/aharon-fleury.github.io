@@ -1,0 +1,80 @@
+# This file controls the settings for your Quarto template. Modified from www.marvinschmitt.com
+
+# website settings
+website:
+  title: "Aharon Fleury"  # Your name
+  description: "Aharon Fleury is an environmental XXXXX"   # A brief slogan (optional)
+  image: img/my_image.jpg
+  
+  favicon: img/favicon.png
+  
+  # start of the navigation bar at the top of the website
+  navbar:
+    pinned: true
+    logo: /img/logo.png
+    
+    # your sub-pages
+    left:
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "New Projects"
+        href: newproj/index.qmd
+      - text: "Blog"
+        href: posts.qmd
+      - text: "Photography"
+        href: photography/index.qmd
+      - text: "CV"
+        href: cv/index.qmd
+      - text: "Publications"
+        href: https://scholar.google.com.au
+        target: _blank
+    
+    # your social media handles
+    right:
+      - icon: twitter
+        href: https://twitter.com/XXXX
+      - icon: linkedin
+        href: https://www.linkedin.com/XXXX
+      - icon: envelope
+        aria-label: email
+        href: "mailto:XXXX@XXX.com"  
+      - icon: github
+        href: https://github.com/MathMarEcol
+  
+  
+
+# Don't touch unless you know what you are doing :) ------------
+  search: 
+    location: navbar
+    type: textbox
+  page-footer: 
+    left: |
+      <span class="faux-block">&#169; 2024 Gandalf the White CC BY-SA 4.0</span>
+    right: |
+      <span class="faux-block"><a href="https://github.com/<github username>/<github username>.github.io">View source on GitHub</a></span>
+
+project:
+  type: website
+  output-dir: docs
+
+  preview: 
+    port: 22222
+    browser: true
+    watch-inputs: true
+    navigate: true
+
+execute:
+  freeze: false
+
+format:
+  html:
+    fontsize: 1.1em
+    theme: 
+      - pulse # 
+      - html/styles.scss
+    toc: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
